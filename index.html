@@ -216,7 +216,7 @@
 
           <nav class="quiz-nav">
             <button class="btn-ghost" id="btn-prev" type="button">上一题</button>
-            <button class="btn-outline" id="btn-next" type="button" disabled>下一题</button>
+            <button class="btn-primary" id="btn-next" type="button" disabled>下一题</button>
           </nav>
         </section>
 
@@ -260,7 +260,7 @@
                 <button class="btn-outline" id="btn-copy" type="button">复制文字</button>
                 <button class="btn-ghost" id="btn-restart" type="button">再测一次</button>
               </div>
-              <p class="save-hint">长按卡片或点「保存结果图片」，可直接分享到小红书</p>
+              <p class="save-hint">点「保存结果图片」生成 2:3 长图，手机上会出现可长按保存的大图</p>
             </div>
           </div>
         </section>
@@ -270,11 +270,15 @@
     <!-- 提示 -->
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-    <!-- iOS 长按保存 -->
+    <!-- 手机端保存：展示大图，长按保存到相册 -->
     <div class="overlay" id="image-overlay">
+      <p class="overlay-tip">长按图片保存到相册</p>
       <img id="overlay-img" alt="江湖命格结果图片" />
-      <p>长按图片 → 存储到照片</p>
-      <button class="btn-ghost" id="overlay-close" type="button">关闭</button>
+      <p class="overlay-note">iPhone 长按后选「存储到照片」；微信里长按选「保存图片」</p>
+      <div class="overlay-actions">
+        <button class="btn-primary" id="overlay-share" type="button" hidden>用系统面板保存 / 分享</button>
+        <button class="btn-outline" id="overlay-close" type="button">关闭</button>
+      </div>
     </div>
 
     <!-- Chart.js：本地内嵌，无外部 CDN 依赖 -->
