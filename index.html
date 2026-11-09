@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#f6f3ec" />
+    <title>选择你的江湖命格 · 测一测你在江湖里是什么命格</title>
+    <meta
+      name="description"
+      content="8 道直觉选择题，测出你的江湖命格：逍遥剑客、隐世医者、商行掌柜、门派少主、独行刺客、客栈老板娘、山野散人、说书人。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="选择你的江湖命格" />
+    <meta property="og:description" content="测一测，你在江湖里是什么命格" />
+    <meta name="format-detection" content="telephone=no" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%238c6b55'/%3E%3Ctext x='32' y='46' font-size='38' text-anchor='middle' fill='%23f6f3ec' font-family='serif'%3E%E5%91%BD%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="stage">
+      <main id="app">
+        <!-- ========== 一、封面 ========== -->
+        <section class="screen is-active" id="screen-cover" aria-label="封面">
+          <div class="cover-card">
+            <div class="cover-art">
+              <!-- 水墨封面：远山 · 孤舟 · 长剑 · 竹叶 -->
+              <svg
+                viewBox="0 0 600 480"
+                preserveAspectRatio="xMidYMid slice"
+                role="img"
+                aria-label="水墨远山、孤舟、长剑与竹叶"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#f6f3ec" stop-opacity="0" />
+                    <stop offset="0.45" stop-color="#f6f3ec" stop-opacity="0.55" />
+                    <stop offset="1" stop-color="#f6f3ec" stop-opacity="1" />
+                  </linearGradient>
+                  <radialGradient id="moon">
+                    <stop offset="0" stop-color="#fffdf6" stop-opacity="0.95" />
+                    <stop offset="0.6" stop-color="#faf7ee" stop-opacity="0.5" />
+                    <stop offset="1" stop-color="#f6f3ec" stop-opacity="0" />
+                  </radialGradient>
+                  <linearGradient id="mtnFar" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#7e8f8c" stop-opacity="0.3" />
+                    <stop offset="1" stop-color="#7e8f8c" stop-opacity="0.04" />
+                  </linearGradient>
+                  <linearGradient id="mtnMid" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#60716f" stop-opacity="0.42" />
+                    <stop offset="1" stop-color="#60716f" stop-opacity="0.05" />
+                  </linearGradient>
+                  <linearGradient id="mtnNear" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#4d5c5a" stop-opacity="0.5" />
+                    <stop offset="1" stop-color="#4d5c5a" stop-opacity="0.04" />
+                  </linearGradient>
+                  <linearGradient id="blade" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#6b7c7c" stop-opacity="0.35" />
+                    <stop offset="0.55" stop-color="#7d8f8c" stop-opacity="0.85" />
+                    <stop offset="1" stop-color="#57696a" stop-opacity="0.95" />
+                  </linearGradient>
+                  <filter id="b3"><feGaussianBlur stdDeviation="3" /></filter>
+                  <filter id="b16"><feGaussianBlur stdDeviation="16" /></filter>
+                  <filter id="b1"><feGaussianBlur stdDeviation="1.2" /></filter>
+                </defs>
+
+                <!-- 淡墨晕染 -->
+                <ellipse cx="140" cy="90" rx="170" ry="96" fill="#6b7c7c" opacity="0.09" filter="url(#b16)" />
+                <ellipse cx="470" cy="330" rx="160" ry="64" fill="#8c6b55" opacity="0.05" filter="url(#b16)" />
+
+                <!-- 朦胧月 -->
+                <circle cx="446" cy="96" r="82" fill="url(#moon)" />
+                <circle cx="446" cy="96" r="22" fill="#fffdf6" opacity="0.8" filter="url(#b1)" />
+
+                <!-- 飞鸟 -->
+                <g stroke="#5d6f6d" stroke-linecap="round" fill="none" stroke-opacity="0.32">
+                  <path d="M320,148 q7,-7 14,0 q7,-7 14,0" stroke-width="1.5" />
+                  <path d="M350,134 q5,-5 10,0 q5,-5 10,0" stroke-width="1.2" />
+                  <path d="M366,156 q4,-4 8,0 q4,-4 8,0" stroke-width="1" />
+                </g>
+
+                <!-- 远山 -->
+                <path
+                  d="M-20,252 Q20,246 52,220 Q78,196 108,184 Q132,174 152,194 Q176,216 204,222 Q228,226 248,206 Q276,180 304,174 Q330,168 348,184 Q372,206 400,217 Q428,228 452,211 Q480,192 506,187 Q540,180 566,197 Q588,210 620,217 L620,330 L-20,330 Z"
+                  fill="url(#mtnFar)"
+                  filter="url(#b3)"
+                />
+                <path
+                  d="M-20,252 Q20,246 52,220 Q78,196 108,184 Q132,174 152,194 Q176,216 204,222 Q228,226 248,206 Q276,180 304,174 Q330,168 348,184 Q372,206 400,217 Q428,228 452,211 Q480,192 506,187 Q540,180 566,197 Q588,210 620,217"
+                  fill="none"
+                  stroke="#5d6f6d"
+                  stroke-opacity="0.16"
+                  stroke-width="1"
+                  filter="url(#b1)"
+                />
+                <!-- 中山 -->
+                <path
+                  d="M-20,296 Q18,291 46,272 Q74,253 100,256 Q126,259 146,275 Q168,291 196,293 Q220,295 240,280 Q266,259 294,262 Q320,265 340,282 Q362,300 392,300 Q420,300 442,283 Q466,265 494,268 Q520,271 542,284 Q562,296 584,298 Q604,300 620,295 L620,350 L-20,350 Z"
+                  fill="url(#mtnMid)"
+                  filter="url(#b3)"
+                />
+                <path
+                  d="M-20,296 Q18,291 46,272 Q74,253 100,256 Q126,259 146,275 Q168,291 196,293 Q220,295 240,280 Q266,259 294,262 Q320,265 340,282 Q362,300 392,300 Q420,300 442,283 Q466,265 494,268 Q520,271 542,284 Q562,296 584,298 Q604,300 620,295"
+                  fill="none"
+                  stroke="#4d5c5a"
+                  stroke-opacity="0.22"
+                  stroke-width="1"
+                  filter="url(#b1)"
+                />
+                <!-- 近岸小丘 -->
+                <path d="M18,352 Q54,338 96,334 Q132,331 160,341 Q178,347 186,354 L14,360 Z" fill="url(#mtnNear)" filter="url(#b3)" />
+                <path d="M452,349 Q488,338 524,336 Q556,334 580,342 L588,350 L448,358 Z" fill="url(#mtnNear)" opacity="0.8" filter="url(#b3)" />
+                <!-- 皴笔 -->
+                <g stroke="#4d5c5a" stroke-linecap="round" fill="none" stroke-opacity="0.16" stroke-width="1.4">
+                  <path d="M60,344 Q72,338 84,340" />
+                  <path d="M104,338 Q118,333 132,336" />
+                  <path d="M492,342 Q504,337 516,339" />
+                  <path d="M538,340 Q550,336 562,339" />
+                </g>
+
+                <!-- 水纹 -->
+                <g stroke="#6b7c7c" stroke-linecap="round" fill="none">
+                  <path d="M298,322 C336,318 370,327 408,323" stroke-opacity="0.2" stroke-width="1.2" />
+                  <path d="M360,338 C402,334 442,342 488,338" stroke-opacity="0.22" stroke-width="1.4" />
+                  <path d="M414,353 C450,350 484,357 522,353" stroke-opacity="0.16" stroke-width="1.1" />
+                  <path d="M330,368 C368,364 396,371 428,367" stroke-opacity="0.13" stroke-width="1" />
+                  <path d="M470,373 C494,370 514,374 532,371" stroke-opacity="0.1" stroke-width="1" />
+                </g>
+
+                <!-- 孤舟 -->
+                <g transform="translate(432,330) scale(1.35)">
+                  <path d="M-28,0 C-18,10 18,10 28,0 L20,-3 L-20,-3 Z" fill="#3f4f4e" opacity="0.6" />
+                  <path d="M-9,-5 L9,-5 L0,-19 Z" fill="#3f4f4e" opacity="0.58" />
+                  <path d="M-3,-4 C3,-4 6,0 3,2 L-3,2 Z" fill="#3f4f4e" opacity="0.5" />
+                  <path d="M9,-8 L20,-26" stroke="#4d5c5a" stroke-opacity="0.4" stroke-width="1.1" />
+                </g>
+
+                <!-- 竹枝竹叶 -->
+                <g stroke-linecap="round" fill="none">
+                  <path d="M64,178 C60,132 66,82 76,30" stroke="#6b7c7c" stroke-opacity="0.45" stroke-width="2.4" />
+                  <path d="M98,186 C96,148 102,104 112,58" stroke="#6b7c7c" stroke-opacity="0.28" stroke-width="1.7" />
+                  <path d="M76,30 L72,42 M70,64 L58,72 M73,94 L88,100 M66,128 L54,134 M112,58 L126,62 M106,96 L96,102 M104,134 L118,140"
+                    stroke="#6b7c7c" stroke-opacity="0.32" stroke-width="1.5" />
+                </g>
+                <g fill="#6b7c7c">
+                  <path d="M0,0 C16,-9 38,-11 56,-4 C38,5 16,6 0,0 Z" transform="translate(72,28) rotate(-38)" fill-opacity="0.3" />
+                  <path d="M0,0 C14,-8 32,-10 48,-4 C32,4 14,5 0,0 Z" transform="translate(80,39) rotate(8)" fill-opacity="0.24" />
+                  <path d="M0,0 C15,-8 34,-9 50,-3 C34,4 15,5 0,0 Z" transform="translate(64,50) rotate(62)" fill-opacity="0.2" />
+                  <path d="M0,0 C14,-7 30,-9 44,-3 C30,3 14,4 0,0 Z" transform="translate(58,72) rotate(28)" fill-opacity="0.22" />
+                  <path d="M0,0 C13,-7 29,-8 43,-3 C29,3 13,4 0,0 Z" transform="translate(126,60) rotate(-46)" fill-opacity="0.28" />
+                  <path d="M0,0 C12,-6 26,-7 39,-2 C26,3 12,4 0,0 Z" transform="translate(120,74) rotate(18)" fill-opacity="0.18" />
+                  <path d="M0,0 C12,-6 26,-7 39,-2 C26,3 12,4 0,0 Z" transform="translate(88,102) rotate(-16)" fill-opacity="0.2" />
+                </g>
+                <g fill="#8c6b55">
+                  <path d="M0,0 C11,-6 24,-7 35,-2 C24,3 11,4 0,0 Z" transform="translate(112,140) rotate(-24)" fill-opacity="0.18" />
+                  <path d="M0,0 C10,-5 21,-6 30,-2 C21,3 10,4 0,0 Z" transform="translate(54,134) rotate(34)" fill-opacity="0.14" />
+                </g>
+
+                <!-- 斜放长剑 -->
+                <g transform="translate(150,352) rotate(-26)">
+                  <path d="M-4,-3.6 L200,-2.4 L216,0 L200,2.4 L-4,3.6 Z" fill="url(#blade)" />
+                  <path d="M0,-1.6 L196,-1 L206,0" stroke="#fffdf6" stroke-opacity="0.5" stroke-width="0.9" fill="none" />
+                  <rect x="-4.5" y="-11" width="7" height="22" rx="2.4" fill="#4d5c5a" opacity="0.8" />
+                  <rect x="-44" y="-4" width="40" height="8" rx="4" fill="#8c6b55" opacity="0.85" />
+                  <circle cx="-48" cy="0" r="4.6" fill="#8c6b55" opacity="0.9" />
+                  <path d="M-50,4 C-54,12 -50,18 -44,20" stroke="#8c6b55" stroke-opacity="0.6" stroke-width="1.6" fill="none" stroke-linecap="round" />
+                </g>
+
+                <!-- 底部渐隐，与正文纸张无缝衔接 -->
+                <rect x="0" y="388" width="600" height="92" fill="url(#fade)" />
+              </svg>
+            </div>
+
+            <div class="cover-body">
+              <p class="eyebrow">江 湖 命 格</p>
+              <h1 class="cover-title">选择你的江湖命格</h1>
+              <p class="cover-sub">测一测，你在江湖里是什么命格</p>
+              <button class="btn-primary" id="btn-start" type="button">开始测试</button>
+              <p class="cover-meta">8道直觉选择题 · 测出你的江湖命格</p>
+              <p class="cover-count">已测试 <span class="num" id="tester-count">0</span> 人</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== 二、答题 ========== -->
+        <section class="screen" id="screen-quiz" aria-label="答题">
+          <header class="quiz-head">
+            <div class="progress-meta">
+              <span>江 湖 命 格</span>
+              <span class="count" id="quiz-progress-text">01 / 08</span>
+            </div>
+            <div
+              class="progress"
+              role="progressbar"
+              aria-label="答题进度"
+              aria-valuemin="0"
+              aria-valuemax="8"
+              aria-valuenow="1"
+            >
+              <i id="progress-fill"></i>
+            </div>
+          </header>
+
+          <div class="quiz-body" id="quiz-body">
+            <p class="q-index" id="q-index">第 一 问</p>
+            <h2 class="q-title" id="q-title"></h2>
+            <div class="options" id="options" role="radiogroup" aria-label="选项"></div>
+          </div>
+
+          <nav class="quiz-nav">
+            <button class="btn-ghost" id="btn-prev" type="button">上一题</button>
+            <button class="btn-outline" id="btn-next" type="button" disabled>下一题</button>
+          </nav>
+        </section>
+
+        <!-- ========== 三、结果 ========== -->
+        <section class="screen" id="screen-result" aria-label="结果">
+          <div class="result-wrap">
+            <!-- 这张卡片就是适合截图分享的长图 -->
+            <div class="result-card" id="result-card">
+              <div class="card-head">
+                <span class="card-label">江 湖 命 格 · 其 <b id="rank-no">一</b></span>
+                <span class="seal" id="rank-seal">剑</span>
+              </div>
+
+              <h2 class="rank-name" id="rank-name">逍遥剑客</h2>
+              <p class="rank-slogan" id="rank-slogan">「身携一剑，不问归途」</p>
+              <p class="rank-desc" id="rank-desc"></p>
+
+              <div class="radar-block">
+                <p class="block-title">你的性格八维雷达图</p>
+                <div class="radar-canvas-wrap">
+                  <canvas id="radar" role="img" aria-label="八维雷达图"></canvas>
+                </div>
+                <ul class="dim-chips" id="dim-chips"></ul>
+              </div>
+
+              <div class="dist-block">
+                <p class="block-title">本次选择分布</p>
+                <ul class="dist-list" id="dist-list"></ul>
+              </div>
+
+              <div class="card-foot">
+                <span>选择你的江湖命格</span>
+                <span class="dot">·</span>
+                <span>江湖命格测试</span>
+              </div>
+            </div>
+
+            <div class="result-actions">
+              <button class="btn-primary" id="btn-save" type="button">保存结果图片</button>
+              <div class="action-row">
+                <button class="btn-outline" id="btn-copy" type="button">复制文字</button>
+                <button class="btn-ghost" id="btn-restart" type="button">再测一次</button>
+              </div>
+              <p class="save-hint">长按卡片或点「保存结果图片」，可直接分享到小红书</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- 提示 -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- iOS 长按保存 -->
+    <div class="overlay" id="image-overlay">
+      <img id="overlay-img" alt="江湖命格结果图片" />
+      <p>长按图片 → 存储到照片</p>
+      <button class="btn-ghost" id="overlay-close" type="button">关闭</button>
+    </div>
+
+    <!-- Chart.js：本地内嵌，无外部 CDN 依赖 -->
+    <script src="vendor/chart.umd.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
